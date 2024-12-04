@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-115 Final Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="projectJS.js" defer></script>
+</head>
+<body>
+    <!-- Banner Section -->
+    <header id="banner">
+        <h1>Build Your Meal Plan</h1>
+        <p>Kevin Bialecki - WEB-115, Section 0007</p>
+    </header>
+
+    <!-- User Information Form -->
+    <section id="user-info">
+        <h2>Personal Information</h2>
+        <form id="mealPlanForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="goal">Goal for the Week:</label>
+            <textarea id="goal" name="goal" rows="3" required></textarea><br><br>
+        </form>
+    </section>
+
+    <!-- Meal Plan Inputs -->
+    <section id="meal-plan">
+        <h2>Weekly Meal Plan</h2>
+        <table id="mealPlanTable">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Breakfast</th>
+                    <th>Snack</th>
+                    <th>Lunch</th>
+                    <th>Snack</th>
+                    <th>Dinner</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows for Monday-Sunday -->
+                
+                  <tr>
+                      <td>Monday-Sunday</td>
+                      <td><input type="text" name="${day}-Breakfast"></td>
+                      <td><input type="text" name="${day}-Snack1"></td>
+                      <td><input type="text" name="${day}-Lunch"></td>
+                      <td><input type="text" name="${day}-Snack2"></td>
+                      <td><input type="text" name="${day}-Dinner"></td>
+                  </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Buttons -->
+    <section id="actions">
+        <button type="button" onclick="generateMealPlan()">Generate Meal Plan</button>
+        <button type="button" onclick="clearMealPlan()">Clear Planner</button>
+        <button type="button" onclick="printPlanner()">Print Planner</button>
+        <button type="button" onclick="downloadPlanner()">Download Planner</button>
+    </section>
+</body>
+</html>
